@@ -1,5 +1,263 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+:root {
+  /* Дублируем переменные для тёмной темы */
+  --accent-font: 'IBM Plex mono', sans-serif;
+  --accent-color: #ff0070;
+  --bg-color: #000028;
+  --main-color: #DB00FF;
+  --p-color: #F1B2CE;
+}
 
 .page {
+  min-inline-size: 375px;
+  background-color: var(--bg-color, #000028);
+  font-family: var(--accent-font, 'IBM Plex mono', sans-serif);
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--accent-color, #ff0070);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.40);
+}
+
+.header__theme-menu-button_active:disabled {
+  pointer-events: none;
+  border: 1px solid var(--accent-color, #FF0070);
+  padding-block: 4px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 100% */
+  padding-inline-start: 13px;
+  padding-inline-end: 13px;
+}
+
+.header__theme-menu {
+  color: var(--accent-color, #ff0070);
+  display: flex;
+  justify-content: flex-end;
+  padding-block-end: 65px;
+  padding-block-start: 40px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.header {
+  position: relative;
+  padding: 10px;
+  block-size: min(668px, 100vh);
+}
+
+.decorative_element {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.rec {
+  position: relative;
+  text-transform: uppercase;
+  color: var(--accent-color, #ff0070);
+  text-align: center;
+  font-family: var(--accent-font, 'IBM Plex mono', sans-serif);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 138.889% */
+  padding-inline-end: 28px;
+}
+
+.circle::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color, #ff0070);
+  box-shadow: 0 0 5px 2px var(--accent-color, #ff0070);
+  top: 18px;
+  right: 19px;
+}
+
+.corner::after {
+  content: "";
+  position: absolute;
+  border-top: 1px solid var(--accent-color, #FF0070);
+  border-right: 1px solid var(--accent-color, #FF0070);
+  top: 10px;
+  right: 10px;
+  width: 25.038px;
+  height: 24.999px; 
+}
+
+.corner::before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid var(--accent-color, #FF0070);
+  border-left: 1px solid var(--accent-color, #FF0070);
+  bottom: 10px;
+  left: 10px;
+  width: 25.038px;
+  height: 24.999px; 
+}
+
+.header__theme-menu-item {
+  display: flex;
+  align-items: center;
+}
+
+.main_title {
+  color: var(--main-color, #DB00FF);
+  text-shadow: 4px 4px 0px var(--accent-color, #FF0070);
+  font-family: var(--accent-font, 'IBM Plex mono', sans-serif);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%; /* 95.7px */
+  text-align: left;
+}
+
+.title__decor {
+  background-color: var(--accent-color, #FF0070);
+  color: var(--bg-color,#000028);
+  font-family: var(--accent-font, 'IBM Plex mono', sans-serif);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; /* 130% */
+}
+
+.main_paragraph {
+  margin-block-start: 55px;
+  margin-block-end: 66px;
+  text-align: left;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article__title {
+  color: var(--accent-color, #FF0070);
+  font-family: var(--accent-font, 'IBM Plex mono', sans-serif);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; /* 130% */
+}
+
+.title__text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.article__text {
+  color: var(--p-color, #F1B2CE);
+  font-family: var(--accent-font, 'IBM Plex mono', sans-serif);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px; /* 130% */
+}
+
+.main {
+  padding-block-start: 40px;
+  padding-block-end: 40px;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.link {
+  text-decoration: none;
+  text-shadow: 1px 1px var(--accent-color, #ff0070);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  border: 1px solid var(--p-color, #F1B2CE);
+}
+
+.title__decor__accent {
+  background-color: var(--accent-color, #FF0070);
+  color: var(--bg-color,#000028);
+  font-family: var(--accent-font, 'IBM Plex mono', sans-serif);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px; /* 130% */
+}
+
+.article__image {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image {
+  width: 100%;
+}
+
+.footer {
+  position: relative;
+  padding: 10px;
+  block-size: min(668px, 100vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__title {
+  color: var(--main-color, #DB00FF);
+  text-shadow: 2px 2px 0px var(--accent-color, #FF0070);
+  font-family: var(--accent-font, 'IBM Plex mono', sans-serif);
+  font-size: 116px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%; /* 95.7px */
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    height: 100vh;
+    padding: 0px;
+    display: grid;
+    grid-template-rows: ;
+  }
+} 
