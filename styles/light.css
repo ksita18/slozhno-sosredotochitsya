@@ -8,7 +8,7 @@
   --accent-color: #353430 ;
   --bg-color: #FFF1F7;
   --main-color: #FFC2E6;
-  --p-color: #FF8DCB; 
+  --p-color: #FF8DCB;
 }
 
 .page.theme_light {
@@ -116,7 +116,7 @@
     --accent-color: #353430 ;
     --bg-color: #FFF1F7;
     --main-color: #FFC2E6;
-    --p-color: #FF8DCB;  
+    --p-color: #FF8DCB;
   }
   .page {
     background-color: var(--bg-color, #FFF1F7);
