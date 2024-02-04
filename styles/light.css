@@ -4,12 +4,11 @@
   переключая тему
 */
 :root .theme-light {
-  /* Переменные светлой темы */  
   --accent-font: 'IBM Plex mono', sans-serif;
   --accent-color: #353430 ;
   --bg-color: #FFF1F7;
   --main-color: #FFC2E6;
-  --p-color: #FF8DCB;  
+  --p-color: #FF8DCB; 
 }
 
 .page.theme_light {
@@ -24,7 +23,7 @@
   --accent-color: #353430 ;
   --bg-color: #FFF1F7;
   --main-color: #FFC2E6;
-  --p-color: #FF8DCB;  
+  --p-color: #FF8DCB;
 }
 
 .page.theme_light .header__theme-menu-button:focus-visible {
@@ -118,7 +117,7 @@
     --bg-color: #FFF1F7;
     --main-color: #FFC2E6;
     --p-color: #FF8DCB;  
-    }
+  }
   .page {
     background-color: var(--bg-color, #FFF1F7);
     font-family: var(--accent-font, 'IBM Plex mono', sans-serif);
@@ -145,9 +144,6 @@
   }
   .header__theme-menu {
     color: var(--accent-color, #353430);
-  }
-  .decorative_element {
-    display: none;
   }
   .corner::after {
     border-top: 1px solid var(--accent-color, #353430);
