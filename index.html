@@ -19,7 +19,7 @@
     <header class="header decorated-zone">
       <div class="corner" aria-hidden="true"></div>
       <div class="decorative_element" aria-hidden="true">
-        <div class="rec">Rec</div>
+        <div class="rec"></div>
         <div class="circle"></div>
       </div>
       <nav class="header__theme-menu">
@@ -49,8 +49,8 @@
         </ul>
       </nav>
       <h1 class="main_title">no focus</h1>
-      <div class="main_paragraph">
-        <p class="title__decor">
+      <div class="main_paragraph_block">
+        <p class="main_paragraph title__decor">
           Что делать, когда не можешь делать ничего<br/>
           Или почему нам так сложно сконцентрироваться, 
           особенно когда очень надо
@@ -97,7 +97,7 @@
         </div>
       </section>
       <section class="article article__row">
-        <h2 class="article__title">
+        <h2 class="article__title article__title__row">
           Что снижает концентрацию внимания?
         </h2>
         <div class="title__text">
@@ -149,14 +149,12 @@
         </div>
       </section>
       <section class="article article__column">
-        <h2 class="article__title">
+        <h2 class="article__title article__title__column">
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)
         </h2>
-        <div class="title__text">
           <h3 class="title__decor">
             5 простых (на самом деле не очень) советов
           </h3>
-        </div>
         <div class="title__text">
           <h3 class="title__decor__accent">
             Представьте небо и облака
@@ -228,36 +226,38 @@
         <h2 class="title__decor">
           А можно в картинках?
         </h2>
+        <picture class="picture">
         <img 
         src="./images/sunset.png"
         loading="lazy"
         alt="закат в горах"
-        class="image"
+        class="image sunset"
         /> 
         <img 
         src="./images/ice-cream.png"
         loading="lazy"
         alt="улыбающиеся шарики мороженного"
-        class="image"
+        class="image ice__cream"
         /> 
         <img 
         src="./images/tape.png"
         loading="lazy"
         alt="мультяшная кассета для магнитофона"
-        class="image"
+        class="image tape"
         /> 
         <img 
         src="./images/books.png"
         loading="lazy"
         alt="мультяшная стопка книг"
-        class="image"
+        class="image books"
         /> 
         <img 
         src="./images/street.png"
         loading="lazy"
         alt="мультяшная улица"
-        class="image"
+        class="image street"
         /> 
+      </picture>
       </section>
     </main>
     <footer class="footer">
