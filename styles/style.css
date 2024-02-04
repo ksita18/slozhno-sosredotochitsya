@@ -69,6 +69,8 @@
   position: relative;
   padding: 10px;
   block-size: min(668px, 100vh);
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
 }
 
 .decorative_element {
