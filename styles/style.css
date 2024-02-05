@@ -1,18 +1,8 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-:root {
-  /* Дублируем переменные для тёмной темы */
-  --accent-font: 'IBM Plex mono', sans-serif;
-  --accent-color: #ff0070;
-  --bg-color: #000028;
-  --main-color: #DB00FF;
-  --p-color: #F1B2CE;
-}
-
 .page {
   min-inline-size: 375px;
   background-color: var(--bg-color, #000028);
-  font-family: var(--accent-font, 'IBM Plex mono', sans-serif);
-  background-image: url(../images/cover-image-dark.png);
+  font-family: var(--accent-font, 'IBM Plex mono', monospace);
+  background-image: var(--background-image);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -26,17 +16,17 @@
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-  border-bottom: 1px solid var(--accent-color, #ff0070);
+  border-bottom: 1px solid var(--border-color, #ff0070);
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.40);
+  /*border: 1px solid rgba(255, 0, 112, 0.40);*/
+  border: 1px solid var(--border-color, #ff0070);
 }
 
 .header__theme-menu-button_active:disabled {
   pointer-events: none;
-  border: 1px solid var(--accent-color, #FF0070);
-  padding-block: 3px;
+  border: 1px solid var(--border-color, #FF0070);
 }
 
 .header__theme-menu-button {
@@ -87,7 +77,7 @@
   text-transform: uppercase;
   color: var(--accent-color, #ff0070);
   text-align: center;
-  font-family: var(--accent-font, 'IBM Plex mono', sans-serif);
+  font-family: var(--accent-font, 'IBM Plex mono', monospace);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -107,7 +97,7 @@
   inset-inline-end: 9px;
 }
 
-.corner::after {
+.decorated-zone::after {
   content: "";
   position: absolute;
   border-top: 1px solid var(--accent-color, #FF0070);
@@ -118,7 +108,7 @@
   height: 24.999px;
 }
 
-.corner::before {
+.decorated-zone::before {
   content: "";
   position: absolute;
   border-bottom: 1px solid var(--accent-color, #FF0070);
@@ -134,10 +124,10 @@
   align-items: center;
 }
 
-.main_title {
-  color: var(--main-color, #DB00FF);
-  text-shadow: 4px 4px 0px var(--accent-color, #FF0070);
-  font-family: var(--accent-font, 'IBM Plex mono', sans-serif);
+.header_title {
+  color: var(--title-color, #DB00FF);
+  text-shadow: 4px 4px 0px var(--text-shadow, #FF0070);
+  font-family: var(--accent-font, 'IBM Plex mono', monospace);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
   font-weight: 700;
@@ -146,21 +136,18 @@
 }
 
 .title__decor {
-  background-color: var(--accent-color, #FF0070);
-  color: var(--bg-color,#000028);
-  font-family: var(--accent-font, 'IBM Plex mono', sans-serif);
+  background-color: var(--text-shadow, #FF0070);
+  color: var(--accent-text-color,#000028);
+  font-family: var(--accent-font, 'IBM Plex mono', monospace);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px; /* 130% */
 }
 
-.main_paragraph {
+.header_paragraph {
   margin-block-start: 55px;
   margin-block-end: 66px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 
 .article {
@@ -171,7 +158,7 @@
 
 .article__title {
   color: var(--accent-color, #FF0070);
-  font-family: var(--accent-font, 'IBM Plex mono', sans-serif);
+  font-family: var(--accent-font, 'IBM Plex mono', monospace);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -185,8 +172,8 @@
 }
 
 .article__text {
-  color: var(--p-color, #F1B2CE);
-  font-family: var(--accent-font, 'IBM Plex mono', sans-serif);
+  color: var(--main-text-color, #F1B2CE);
+  font-family: var(--accent-font, 'IBM Plex mono', monospace);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -205,7 +192,7 @@
 
 .link {
   text-decoration: none;
-  text-shadow: 1px 1px var(--accent-color, #ff0070);
+  text-shadow: 1px 1px var(--text-shadow, #ff0070);
 }
 
 .link:hover {
@@ -217,13 +204,13 @@
 }
 
 .link:focus-visible {
-  border: 1px solid var(--p-color, #F1B2CE);
+  border: 1px solid var(--border-color, #ff0070);
 }
 
 .title__decor__accent {
-  background-color: var(--accent-color, #FF0070);
-  color: var(--bg-color,#000028);
-  font-family: var(--accent-font, 'IBM Plex mono', sans-serif);
+  background-color: var(--text-shadow, #FF0070);
+  color: var(--accent-text-color,#000028);
+  font-family: var(--accent-font, 'IBM Plex mono', monospace);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -258,9 +245,9 @@
 }
 
 .footer__title {
-  color: var(--main-color, #DB00FF);
-  text-shadow: 2px 2px 0px var(--accent-color, #FF0070);
-  font-family: var(--accent-font, 'IBM Plex mono', sans-serif);
+  color: var(--title-color, #DB00FF);
+  text-shadow: 2px 2px 0px var(--text-shadow, #FF0070);
+  font-family: var(--accent-font, 'IBM Plex mono', monospace);
   font-size: 116px;
   font-style: normal;
   font-weight: 700;
@@ -272,11 +259,11 @@
     height: 100vh;
     padding: 20px;
   }
-  .corner::after {
+  .decorated-zone::after {
     top: 20px;
     right: 20px;
   }
-  .corner::before {
+  .decorated-zone::before {
     bottom: 20px;
     left: 20px;
   }
@@ -284,17 +271,14 @@
     padding-block-end: 173px;
     padding-block-start: 172px;
   }
-  .main_title {
+  .header_title {
     margin-inline-start: -20px;
   }
-  .main_paragraph {
+  .header_paragraph {
     margin-block-start: 162px;
     margin-block-end: 183px;
     width: 364px;
-  }
-  .main_paragraph_block {
-    display: flex;
-    justify-content: flex-end;
+    justify-self: self-end;
   }
   .main {
     padding-inline-start: 20px;
@@ -361,15 +345,15 @@
     height: 100vh;
     padding: 20px;
   }
-  .corner::after {
+  .decorated-zone::after {
     top: 20px;
     right: 20px;
   }
-  .corner::before {
+  .decorated-zone::before {
     bottom: 20px;
     left: 20px;
   }
-  .main_title {
+  .header_title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-inline-start: -20px;
   }
@@ -387,14 +371,11 @@
     align-items: flex-start;
     gap: 10px;
   }
-  .main_paragraph {
+  .header_paragraph {
     margin-block-start: 115px;
     margin-block-end: 134px;
     width: 491px;
-  }
-  .main_paragraph_block {
-    display: flex;
-    justify-content: flex-end;
+    justify-self: self-end;
   }
   .main {
     padding-inline-start: 20px;

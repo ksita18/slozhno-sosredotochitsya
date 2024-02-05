@@ -3,10 +3,14 @@
   и их переопределение под различные устройства
 */
 :root {
-  --accent-font: 'IBM Plex mono', sans-serif;
+  --background-image: url(../images/cover-image-dark.png);
+  --accent-font: 'IBM Plex mono', monospace;
+  --background-color: #000028;
   --accent-color: #ff0070;
-  --bg-color: #000028;
-  --main-color: #DB00FF;
-  --p-color: #F1B2CE;
+  --text-shadow: #ff0070;
+  --accent-text-color: #000028;
+  --title-color: #DB00FF;
+  --main-text-color: #F1B2CE;
+  --border-color: #ff0070;
 }
 
