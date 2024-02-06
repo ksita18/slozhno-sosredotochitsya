@@ -20,8 +20,7 @@
 }
 
 .header__theme-menu-button:hover {
-  /*border: 1px solid rgba(255, 0, 112, 0.40);*/
-  border: 1px solid var(--border-color, #ff0070);
+  border: 1px solid var(--border-color-hover, rgba(255, 0, 112, 0.40));
 }
 
 .header__theme-menu-button_active:disabled {

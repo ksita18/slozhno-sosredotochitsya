@@ -14,6 +14,7 @@
   --title-color: #DB00FF;
   --main-text-color: #F1B2CE;
   --border-color: #ff0070;
+  --border-color-hover: rgba(255, 0, 112, 0.4);
 }
 
 .page.theme_dark {
@@ -30,4 +31,5 @@
   --title-color: #DB00FF;
   --main-text-color: #F1B2CE;
   --border-color: #ff0070;
+  --border-color-hover: rgba(255, 0, 112, 0.4);
 }
