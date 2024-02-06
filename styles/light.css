@@ -13,6 +13,7 @@
   --title-color: #FFC2E6;
   --main-text-color: #353430;
   --border-color: #353430;
+  --border-color-hover: rgba(50, 49, 45, 0.4);
 }
 
 .page.theme_light {
